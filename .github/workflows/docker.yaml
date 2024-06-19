@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
+  schedule:
+   -cron: '00 23 * * *'
+   
 
 
 env:
@@ -155,3 +158,4 @@ jobs:
             echo "=============================================================================="     
             
         done < images.txt
+        
